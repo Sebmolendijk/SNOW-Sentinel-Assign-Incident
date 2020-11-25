@@ -15,12 +15,12 @@
         <condition/>
         <description/>
         <execute_function>false</execute_function>
-        <filter_condition table="incident">assigned_toVALCHANGES^EQ<item endquery="false" field="assigned_to" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
+        <filter_condition table="incident">impactVALCHANGES^EQ<item endquery="false" field="impact" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter_condition>
         <is_rest>false</is_rest>
         <message/>
-        <name>Assign incident owner</name>
+        <name>Change incident severity</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -30,14 +30,13 @@
         <rest_variables/>
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
-
+	
 	try { 
-		var r = new sn_ws.RESTMessageV2('x_556309_azsentine.Update-Incident', 'Set-incidentOwner');
+		var r = new sn_ws.RESTMessageV2('x_556309_azsentine.Update-Incident', 'Update-severity');
+		r.setStringParameterNoEscape('incidentComment', 'From SNOW');
 		r.setStringParameterNoEscape('incidentId', '752cd929-5196-2c6b-1340-5dba81967f6e');
-		r.setStringParameterNoEscape('incidentOwner', current.assigned_to.email);
-		r.setStringParameterNoEscape('incidentComment', 'Test from SNOW');
+		r.setStringParameterNoEscape('incidentSeverity', current.impact);
 
-   
 		var response = r.execute();
 		var responseBody = response.getBody();
 		var httpStatus = response.getStatusCode();
@@ -49,21 +48,21 @@
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2020-11-25 13:06:21</sys_created_on>
+        <sys_created_on>2020-11-25 13:27:50</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>ed78204c2f34a010aab2d5ccf699b679</sys_id>
+        <sys_id>f89deccc2f34a010aab2d5ccf699b6eb</sys_id>
         <sys_mod_count>5</sys_mod_count>
-        <sys_name>Assign incident owner</sys_name>
+        <sys_name>Change incident severity</sys_name>
         <sys_overrides/>
         <sys_package display_value="AzSentinel integration" source="x_556309_azsentine">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_package>
         <sys_policy/>
         <sys_scope display_value="AzSentinel integration">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_scope>
-        <sys_update_name>sys_script_ed78204c2f34a010aab2d5ccf699b679</sys_update_name>
+        <sys_update_name>sys_script_f89deccc2f34a010aab2d5ccf699b6eb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-11-25 13:22:29</sys_updated_on>
+        <sys_updated_on>2020-11-25 13:55:09</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>
-    <sys_translated_text action="delete_multiple" query="documentkey=ed78204c2f34a010aab2d5ccf699b679"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=f89deccc2f34a010aab2d5ccf699b6eb"/>
 </record_update>
