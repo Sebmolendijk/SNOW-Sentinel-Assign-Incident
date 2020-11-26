@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_parameters">
+    <sys_rest_message_fn_parameters action="DELETE">
+        <name>incidentComment</name>
+        <rest_message_function display_value="Set-incidentOwner">8013d80c2ff0a010aab2d5ccf699b646</rest_message_function>
+        <sys_class_name>sys_rest_message_fn_parameters</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-11-25 11:40:28</sys_created_on>
+        <sys_id>b03594cc2ff0a010aab2d5ccf699b66d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>incidentComment</sys_name>
+        <sys_package display_value="AzSentinel integration" source="x_556309_azsentine">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AzSentinel integration">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_scope>
+        <sys_update_name>sys_rest_message_fn_parameters_b03594cc2ff0a010aab2d5ccf699b66d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-11-25 11:41:17</sys_updated_on>
+        <type>string</type>
+        <value>Test from SNOW</value>
+    </sys_rest_message_fn_parameters>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AzSentinel integration">b7ac7bbb2fa0a010aab2d5ccf699b653</application>
+        <file_path/>
+        <instance_id>7c9ad04ddb34cf0852e3f70fbf96197c</instance_id>
+        <instance_name>dev43601</instance_name>
+        <name>sys_rest_message_fn_parameters_b03594cc2ff0a010aab2d5ccf699b66d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_parameters"><sys_rest_message_fn_parameters action="INSERT_OR_UPDATE"><name>incidentComment</name><rest_message_function display_value="Set-incidentOwner">8013d80c2ff0a010aab2d5ccf699b646</rest_message_function><sys_class_name>sys_rest_message_fn_parameters</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-11-25 11:40:28</sys_created_on><sys_id>b03594cc2ff0a010aab2d5ccf699b66d</sys_id><sys_mod_count>2</sys_mod_count><sys_name>incidentComment</sys_name><sys_package display_value="AzSentinel integration" source="x_556309_azsentine">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_package><sys_policy/><sys_scope display_value="AzSentinel integration">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_scope><sys_update_name>sys_rest_message_fn_parameters_b03594cc2ff0a010aab2d5ccf699b66d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-11-25 11:41:17</sys_updated_on><type>string</type><value>Test from SNOW</value></sys_rest_message_fn_parameters></record_update>]]></payload>
+        <payload_hash>-292073559</payload_hash>
+        <record_name>incidentComment</record_name>
+        <reverted_from/>
+        <source>ceeef7ff2fa0a010aab2d5ccf699b6d4</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-11-25 11:41:17</sys_created_on>
+        <sys_id>f46518cc2ff0a010aab2d5ccf699b6c3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>175ff35319a0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-11-25 11:41:17</sys_updated_on>
+        <type>Variable Substitutions</type>
+        <update_guid>306518cc31f0a010c3d1cb5ac31aeec3</update_guid>
+        <update_guid_history>306518cc31f0a010c3d1cb5ac31aeec3:-292073559,ae55dc4c46f0a01045614cfd7ffb607a:1308794070,303594cc1bf0a0103041e1fe1032f56e:2099756169</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>sebmolendijk@hotmail.com</sys_created_by>
+        <sys_created_on>2020-11-26 13:35:27</sys_created_on>
+        <sys_db_object display_value="" name="sys_rest_message_fn_parameters">sys_rest_message_fn_parameters</sys_db_object>
+        <sys_id>fa60fd65385e480eabcbfae99a7d3c69</sys_id>
+        <sys_metadata>b03594cc2ff0a010aab2d5ccf699b66d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>incidentComment</sys_name>
+        <sys_package display_value="AzSentinel integration" source="x_556309_azsentine">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AzSentinel integration">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_scope>
+        <sys_scope_delete display_value="">06e1044b773847259c12342f3a7313b1</sys_scope_delete>
+        <sys_update_name>sys_rest_message_fn_parameters_b03594cc2ff0a010aab2d5ccf699b66d</sys_update_name>
+        <sys_update_version display_value="sys_rest_message_fn_parameters_b03594cc2ff0a010aab2d5ccf699b66d">f46518cc2ff0a010aab2d5ccf699b6c3</sys_update_version>
+        <sys_updated_by>sebmolendijk@hotmail.com</sys_updated_by>
+        <sys_updated_on>2020-11-26 13:35:27</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

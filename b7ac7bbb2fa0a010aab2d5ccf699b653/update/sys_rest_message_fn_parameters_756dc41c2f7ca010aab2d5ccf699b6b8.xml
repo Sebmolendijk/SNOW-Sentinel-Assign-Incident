@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_parameters">
     <sys_rest_message_fn_parameters action="INSERT_OR_UPDATE">
         <name>operation</name>
-        <rest_message_function display_value="Add-Comment">46e528882f34a010aab2d5ccf699b6b2</rest_message_function>
+        <rest_message_function display_value="Add-IncidentComment">46e528882f34a010aab2d5ccf699b6b2</rest_message_function>
         <sys_class_name>sys_rest_message_fn_parameters</sys_class_name>
         <sys_created_by>sebmolendijk@hotmail.com</sys_created_by>
         <sys_created_on>2020-11-26 05:45:07</sys_created_on>
