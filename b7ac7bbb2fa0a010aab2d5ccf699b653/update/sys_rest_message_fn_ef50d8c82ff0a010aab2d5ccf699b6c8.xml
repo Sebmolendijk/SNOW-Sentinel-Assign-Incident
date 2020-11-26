@@ -7,7 +7,8 @@
         <content>{&#13;
     "incidentId": "${incidentId}",&#13;
     "severity": "${incidentSeverity}",&#13;
-    "comment": "${incidentComment}"&#13;
+    "comment": "${incidentComment}",&#13;
+    "operation": "${operation}"&#13;
 }</content>
         <function_name>Update-severity</function_name>
         <http_method>post</http_method>
@@ -21,14 +22,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-11-25 11:20:14</sys_created_on>
         <sys_id>ef50d8c82ff0a010aab2d5ccf699b6c8</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Update-severity</sys_name>
         <sys_package display_value="AzSentinel integration" source="x_556309_azsentine">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_package>
         <sys_policy/>
         <sys_scope display_value="AzSentinel integration">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_scope>
         <sys_update_name>sys_rest_message_fn_ef50d8c82ff0a010aab2d5ccf699b6c8</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-11-25 11:25:10</sys_updated_on>
+        <sys_updated_by>sebmolendijk@hotmail.com</sys_updated_by>
+        <sys_updated_on>2020-11-26 05:46:10</sys_updated_on>
         <use_basic_auth>false</use_basic_auth>
         <use_mid_server/>
         <use_mutual_auth>false</use_mutual_auth>

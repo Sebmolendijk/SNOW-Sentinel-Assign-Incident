@@ -6,30 +6,32 @@
         <basic_auth_user/>
         <content>{&#13;
     "incidentId": "${incidentId}",&#13;
-    "severitry": "${incidentSeverity}",&#13;
+    "operation": "${operation}",&#13;
     "status": "${incidentStatus}",&#13;
+    "severity": "${incidentSeverity}",&#13;
+    "owner": "${incidentOwner}",&#13;
     "comment": "${incidentComment}"&#13;
 }</content>
-        <function_name>Update-status</function_name>
+        <function_name>Update-SentinelIncident</function_name>
         <http_method>post</http_method>
         <lock>false</lock>
         <oauth2_profile/>
         <protocol_name/>
-        <qualified_name>Update-Incident [ Update-status ]</qualified_name>
+        <qualified_name>Update-Incident [ Update-SentinelIncident ]</qualified_name>
         <rest_endpoint/>
         <rest_message display_value="Update-Incident">258a44082ff0a010aab2d5ccf699b6ec</rest_message>
         <sys_class_name>sys_rest_message_fn</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-11-25 10:54:15</sys_created_on>
         <sys_id>fb9ac4c42ff0a010aab2d5ccf699b6f2</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_name>Update-status</sys_name>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Update-SentinelIncident</sys_name>
         <sys_package display_value="AzSentinel integration" source="x_556309_azsentine">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_package>
         <sys_policy/>
         <sys_scope display_value="AzSentinel integration">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_scope>
         <sys_update_name>sys_rest_message_fn_fb9ac4c42ff0a010aab2d5ccf699b6f2</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-11-25 11:21:51</sys_updated_on>
+        <sys_updated_by>sebmolendijk@hotmail.com</sys_updated_by>
+        <sys_updated_on>2020-11-26 11:04:41</sys_updated_on>
         <use_basic_auth>false</use_basic_auth>
         <use_mid_server/>
         <use_mutual_auth>false</use_mutual_auth>

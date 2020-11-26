@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_parameters">
     <sys_rest_message_fn_parameters action="INSERT_OR_UPDATE">
         <name>incidentId</name>
-        <rest_message_function display_value="Update-status">fb9ac4c42ff0a010aab2d5ccf699b6f2</rest_message_function>
+        <rest_message_function display_value="Update-SentinelIncident">fb9ac4c42ff0a010aab2d5ccf699b6f2</rest_message_function>
         <sys_class_name>sys_rest_message_fn_parameters</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-11-25 10:56:51</sys_created_on>
