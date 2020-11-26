@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_parameters">
     <sys_rest_message_fn_parameters action="INSERT_OR_UPDATE">
-        <name>operation</name>
-        <rest_message_function display_value="Add-IncidentComment">46e528882f34a010aab2d5ccf699b6b2</rest_message_function>
+        <name>incidentSeverity</name>
+        <rest_message_function display_value="Update-SentinelIncident">fb9ac4c42ff0a010aab2d5ccf699b6f2</rest_message_function>
         <sys_class_name>sys_rest_message_fn_parameters</sys_class_name>
         <sys_created_by>sebmolendijk@hotmail.com</sys_created_by>
-        <sys_created_on>2020-11-26 05:45:07</sys_created_on>
-        <sys_id>756dc41c2f7ca010aab2d5ccf699b6b8</sys_id>
+        <sys_created_on>2020-11-26 15:09:30</sys_created_on>
+        <sys_id>a0ae0e102ff0e010aab2d5ccf699b613</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>operation</sys_name>
+        <sys_name>incidentSeverity</sys_name>
         <sys_package display_value="AzSentinel integration" source="x_556309_azsentine">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_package>
         <sys_policy/>
         <sys_scope display_value="AzSentinel integration">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_scope>
-        <sys_update_name>sys_rest_message_fn_parameters_756dc41c2f7ca010aab2d5ccf699b6b8</sys_update_name>
+        <sys_update_name>sys_rest_message_fn_parameters_a0ae0e102ff0e010aab2d5ccf699b613</sys_update_name>
         <sys_updated_by>sebmolendijk@hotmail.com</sys_updated_by>
-        <sys_updated_on>2020-11-26 05:45:07</sys_updated_on>
+        <sys_updated_on>2020-11-26 15:09:30</sys_updated_on>
         <type>string</type>
-        <value>add_comment</value>
+        <value/>
     </sys_rest_message_fn_parameters>
 </record_update>
