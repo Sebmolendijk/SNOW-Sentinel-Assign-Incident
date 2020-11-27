@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="number" label="Number" language="en" table="x_556309_azsentine_user_entity">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <help/>
+            <hint/>
+            <label>Number</label>
+            <language>en</language>
+            <name>x_556309_azsentine_user_entity</name>
+            <plural>Numbers</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>sebmolendijk@hotmail.com</sys_created_by>
+            <sys_created_on>2020-11-27 05:39:20</sys_created_on>
+            <sys_id>1eb5516c2fb8e010aab2d5ccf699b6e3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Number</sys_name>
+            <sys_package display_value="AzSentinel integration" source="x_556309_azsentine">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="AzSentinel integration">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_scope>
+            <sys_update_name>sys_documentation_x_556309_azsentine_user_entity_number_en</sys_update_name>
+            <sys_updated_by>sebmolendijk@hotmail.com</sys_updated_by>
+            <sys_updated_on>2020-11-27 05:39:20</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
