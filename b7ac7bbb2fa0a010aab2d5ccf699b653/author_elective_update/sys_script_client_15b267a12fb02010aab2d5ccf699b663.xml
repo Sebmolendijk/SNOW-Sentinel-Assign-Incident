@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>false</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Load Azure Sentinel comments on incident load</description>
+        <field>active</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Load Sentinel comments</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+   //Type appropriate comment here, and begin script below
+ try { 
+ var r = new sn_ws.RESTMessageV2('x_556309_azsentine.Update-Incident', 'Update-SentinelIncident');
+ r.setStringParameterNoEscape('incidentComment', '');
+ r.setStringParameterNoEscape('operation', '');
+ r.setStringParameterNoEscape('incidentOwner', '');
+ r.setStringParameterNoEscape('incidentSeverity', '');
+ r.setStringParameterNoEscape('incidentStatus', '');
+ r.setStringParameterNoEscape('incidentId', '');
+
+//override authentication profile 
+//authentication type ='basic'/ 'oauth2'
+//r.setAuthenticationProfile(authentication type, profile name);
+
+//set a MID server name if one wants to run the message on MID
+//r.setMIDServer('MY_MID_SERVER');
+
+//if the message is configured to communicate through ECC queue, either
+//by setting a MID server or calling executeAsync, one needs to set skip_sensor
+//to true. Otherwise, one may get an intermittent error that the response body is null
+//r.setEccParameter('skip_sensor', true);
+
+ var response = r.execute();
+ var responseBody = response.getBody();
+ var httpStatus = response.getStatusCode();
+}
+catch(ex) {
+ var message = ex.message;
+}
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>sebmolendijk@hotmail.com</sys_created_by>
+        <sys_created_on>2020-11-30 18:33:32</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>15b267a12fb02010aab2d5ccf699b663</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Load Sentinel comments</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AzSentinel integration" source="x_556309_azsentine">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AzSentinel integration">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_scope>
+        <sys_update_name>sys_script_client_15b267a12fb02010aab2d5ccf699b663</sys_update_name>
+        <sys_updated_by>sebmolendijk@hotmail.com</sys_updated_by>
+        <sys_updated_on>2020-12-03 14:27:46</sys_updated_on>
+        <table>incident</table>
+        <type>onLoad</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AzSentinel integration">b7ac7bbb2fa0a010aab2d5ccf699b653</application>
+        <file_path/>
+        <instance_id>7c9ad04ddb34cf0852e3f70fbf96197c</instance_id>
+        <instance_name>dev43601</instance_name>
+        <name>sys_script_client_15b267a12fb02010aab2d5ccf699b663</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;false&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description&gt;Load Azure Sentinel comments on incident load&lt;/description&gt;&lt;field&gt;active&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;Load Sentinel comments&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onLoad() {
+   //Type appropriate comment here, and begin script below
+ try { 
+ var r = new sn_ws.RESTMessageV2('x_556309_azsentine.Update-Incident', 'Update-SentinelIncident');
+ r.setStringParameterNoEscape('incidentComment', '');
+ r.setStringParameterNoEscape('operation', '');
+ r.setStringParameterNoEscape('incidentOwner', '');
+ r.setStringParameterNoEscape('incidentSeverity', '');
+ r.setStringParameterNoEscape('incidentStatus', '');
+ r.setStringParameterNoEscape('incidentId', '');
+
+//override authentication profile 
+//authentication type ='basic'/ 'oauth2'
+//r.setAuthenticationProfile(authentication type, profile name);
+
+//set a MID server name if one wants to run the message on MID
+//r.setMIDServer('MY_MID_SERVER');
+
+//if the message is configured to communicate through ECC queue, either
+//by setting a MID server or calling executeAsync, one needs to set skip_sensor
+//to true. Otherwise, one may get an intermittent error that the response body is null
+//r.setEccParameter('skip_sensor', true);
+
+ var response = r.execute();
+ var responseBody = response.getBody();
+ var httpStatus = response.getStatusCode();
+}
+catch(ex) {
+ var message = ex.message;
+}
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;sebmolendijk@hotmail.com&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-11-30 18:33:32&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;15b267a12fb02010aab2d5ccf699b663&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_name&gt;Load Sentinel comments&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="AzSentinel integration" source="x_556309_azsentine"&gt;b7ac7bbb2fa0a010aab2d5ccf699b653&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AzSentinel integration"&gt;b7ac7bbb2fa0a010aab2d5ccf699b653&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_15b267a12fb02010aab2d5ccf699b663&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;sebmolendijk@hotmail.com&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-12-03 14:27:46&lt;/sys_updated_on&gt;&lt;table&gt;incident&lt;/table&gt;&lt;type&gt;onLoad&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-227293383</payload_hash>
+        <record_name>Load Sentinel comments</record_name>
+        <reverted_from/>
+        <source>ceeef7ff2fa0a010aab2d5ccf699b6d4</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>sebmolendijk@hotmail.com</sys_created_by>
+        <sys_created_on>2020-12-03 14:27:47</sys_created_on>
+        <sys_id>e5380a2a2fb4a010aab2d5ccf699b669</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17629007ed50000001</sys_recorded_at>
+        <sys_updated_by>sebmolendijk@hotmail.com</sys_updated_by>
+        <sys_updated_on>2020-12-03 14:27:47</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>21380a2af9b4a0107e8b8a01f774b369</update_guid>
+        <update_guid_history>21380a2af9b4a0107e8b8a01f774b369:-227293383,e1138ee29fb4a0102f041e68c5cee9e1:1278749542,0ce4e7e18ab020105acd977df82484ee:-584477500,87e3a3e1e5b02010350c0422fb163007:981154069,dcb3efa16db020107a9047738e10b168:-106731229</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>sebmolendijk@hotmail.com</sys_created_by>
+        <sys_created_on>2020-12-03 16:45:14</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>37ef13bd179849fc957b034d384702e9</sys_id>
+        <sys_metadata>15b267a12fb02010aab2d5ccf699b663</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Load Sentinel comments</sys_name>
+        <sys_package display_value="AzSentinel integration" source="x_556309_azsentine">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_package>
+        <sys_parent display_value="Incident">fa257b04c927101091f9f06464832798</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="AzSentinel integration">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_scope>
+        <sys_scope_delete display_value="">06e1044b773847259c12342f3a7313b1</sys_scope_delete>
+        <sys_update_name>sys_script_client_15b267a12fb02010aab2d5ccf699b663</sys_update_name>
+        <sys_update_version display_value="sys_script_client_15b267a12fb02010aab2d5ccf699b663">e5380a2a2fb4a010aab2d5ccf699b669</sys_update_version>
+        <sys_updated_by>sebmolendijk@hotmail.com</sys_updated_by>
+        <sys_updated_on>2020-12-03 16:45:14</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

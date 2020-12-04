@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_wizard_answer">
+    <sys_wizard_answer action="DELETE">
+        <active>true</active>
+        <answer>Sentinel Incident</answer>
+        <button_label/>
+        <dependent_value/>
+        <element/>
+        <name>Sentinel Incident</name>
+        <next_question/>
+        <order>100</order>
+        <payload_name/>
+        <question display_value="Task" name="Task">6ff033c4c923101091f9f06464832717</question>
+        <roles/>
+        <script/>
+        <sys_class_name>sys_wizard_answer</sys_class_name>
+        <sys_created_by>sebmolendijk@hotmail.com</sys_created_by>
+        <sys_created_on>2020-12-01 11:36:48</sys_created_on>
+        <sys_id>59ed03b52ff82010aab2d5ccf699b6a9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Sentinel Incident</sys_name>
+        <sys_package display_value="AzSentinel integration" source="x_556309_azsentine">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AzSentinel integration">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_scope>
+        <sys_update_name>sys_wizard_answer_59ed03b52ff82010aab2d5ccf699b6a9</sys_update_name>
+        <sys_updated_by>sebmolendijk@hotmail.com</sys_updated_by>
+        <sys_updated_on>2020-12-01 11:36:48</sys_updated_on>
+        <table/>
+        <target_url>x_556309_azsentine_sentinel_incident.do</target_url>
+        <type>1</type>
+    </sys_wizard_answer>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AzSentinel integration">b7ac7bbb2fa0a010aab2d5ccf699b653</application>
+        <file_path/>
+        <instance_id>7c9ad04ddb34cf0852e3f70fbf96197c</instance_id>
+        <instance_name>dev43601</instance_name>
+        <name>sys_wizard_answer_59ed03b52ff82010aab2d5ccf699b6a9</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_wizard_answer"><sys_wizard_answer action="INSERT_OR_UPDATE"><active>true</active><answer>Sentinel Incident</answer><button_label/><dependent_value/><element/><name>Sentinel Incident</name><next_question/><order>100</order><payload_name/><question display_value="Task" name="Task">6ff033c4c923101091f9f06464832717</question><roles/><script/><sys_class_name>sys_wizard_answer</sys_class_name><sys_created_by>sebmolendijk@hotmail.com</sys_created_by><sys_created_on>2020-12-01 11:36:48</sys_created_on><sys_id>59ed03b52ff82010aab2d5ccf699b6a9</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Sentinel Incident</sys_name><sys_package display_value="AzSentinel integration" source="x_556309_azsentine">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_package><sys_policy/><sys_scope display_value="AzSentinel integration">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_scope><sys_update_name>sys_wizard_answer_59ed03b52ff82010aab2d5ccf699b6a9</sys_update_name><sys_updated_by>sebmolendijk@hotmail.com</sys_updated_by><sys_updated_on>2020-12-01 11:36:48</sys_updated_on><table/><target_url>x_556309_azsentine_sentinel_incident.do</target_url><type>1</type></sys_wizard_answer></record_update>]]></payload>
+        <payload_hash>-530396833</payload_hash>
+        <record_name>Sentinel Incident</record_name>
+        <reverted_from/>
+        <source>2c8e16822f202010aab2d5ccf699b6a3</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2020-11-19 16:32:32</sys_created_on>
+        <sys_id>4f7f82ae2fb4a010aab2d5ccf699b601</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>175e159ad000000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>Answer</type>
+        <update_guid>0f7f82aea0b4a010826e2c7b901a7f01</update_guid>
+        <update_guid_history>0f7f82aea0b4a010826e2c7b901a7f01:-530396833</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>sebmolendijk@hotmail.com</sys_created_by>
+        <sys_created_on>2020-12-03 14:59:34</sys_created_on>
+        <sys_db_object display_value="" name="sys_wizard_answer">sys_wizard_answer</sys_db_object>
+        <sys_id>01c27b5f8b6647b680767569fa885941</sys_id>
+        <sys_metadata>59ed03b52ff82010aab2d5ccf699b6a9</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Sentinel Incident</sys_name>
+        <sys_package display_value="AzSentinel integration" source="x_556309_azsentine">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_package>
+        <sys_parent display_value="Task">6ff033c4c923101091f9f06464832717</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="AzSentinel integration">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_scope>
+        <sys_scope_delete display_value="">06e1044b773847259c12342f3a7313b1</sys_scope_delete>
+        <sys_update_name>sys_wizard_answer_59ed03b52ff82010aab2d5ccf699b6a9</sys_update_name>
+        <sys_update_version display_value="sys_wizard_answer_59ed03b52ff82010aab2d5ccf699b6a9">4f7f82ae2fb4a010aab2d5ccf699b601</sys_update_version>
+        <sys_updated_by>sebmolendijk@hotmail.com</sys_updated_by>
+        <sys_updated_on>2020-12-03 14:59:34</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application display_value="Azure Sentinel Incident">85ed03b52ff82010aab2d5ccf699b67a</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>Sentinel Incidents</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_556309_azsentine_sentinel_incident</name>
+        <order/>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <roles>x_556309_azsentine.sentinel_incident_user</roles>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>sebmolendijk@hotmail.com</sys_created_by>
+        <sys_created_on>2020-12-01 11:36:46</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>cded03b52ff82010aab2d5ccf699b67d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Sentinel Incidents</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AzSentinel integration" source="x_556309_azsentine">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AzSentinel integration">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_scope>
+        <sys_update_name>sys_app_module_cded03b52ff82010aab2d5ccf699b67d</sys_update_name>
+        <sys_updated_by>sebmolendijk@hotmail.com</sys_updated_by>
+        <sys_updated_on>2020-12-01 11:36:46</sys_updated_on>
+        <timeline_page/>
+        <title>Sentinel Incidents</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AzSentinel integration">b7ac7bbb2fa0a010aab2d5ccf699b653</application>
+        <file_path/>
+        <instance_id>7c9ad04ddb34cf0852e3f70fbf96197c</instance_id>
+        <instance_name>dev43601</instance_name>
+        <name>sys_app_module_cded03b52ff82010aab2d5ccf699b67d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="Azure Sentinel Incident">85ed03b52ff82010aab2d5ccf699b67a</application><assessment/><device_type/><filter/><hint/><homepage/><image/><link_type>LIST</link_type><map_page/><mobile_title>Sentinel Incidents</mobile_title><mobile_view_name>Mobile</mobile_view_name><name>x_556309_azsentine_sentinel_incident</name><order/><override_menu_roles>false</override_menu_roles><query/><report/><roles>x_556309_azsentine.sentinel_incident_user</roles><sys_class_name>sys_app_module</sys_class_name><sys_created_by>sebmolendijk@hotmail.com</sys_created_by><sys_created_on>2020-12-01 11:36:46</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>cded03b52ff82010aab2d5ccf699b67d</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Sentinel Incidents</sys_name><sys_overrides/><sys_package display_value="AzSentinel integration" source="x_556309_azsentine">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_package><sys_policy/><sys_scope display_value="AzSentinel integration">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_scope><sys_update_name>sys_app_module_cded03b52ff82010aab2d5ccf699b67d</sys_update_name><sys_updated_by>sebmolendijk@hotmail.com</sys_updated_by><sys_updated_on>2020-12-01 11:36:46</sys_updated_on><timeline_page/><title>Sentinel Incidents</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+        <payload_hash>-266744122</payload_hash>
+        <record_name>Sentinel Incidents</record_name>
+        <reverted_from/>
+        <source>ceeef7ff2fa0a010aab2d5ccf699b6d4</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>sebmolendijk@hotmail.com</sys_created_by>
+        <sys_created_on>2020-12-01 11:36:47</sys_created_on>
+        <sys_id>c1ed03b52ff82010aab2d5ccf699b681</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1761e1738e10000001</sys_recorded_at>
+        <sys_updated_by>sebmolendijk@hotmail.com</sys_updated_by>
+        <sys_updated_on>2020-12-01 11:36:47</sys_updated_on>
+        <type>Module</type>
+        <update_guid>0ded03b590f82010e222ec332189c280</update_guid>
+        <update_guid_history>0ded03b590f82010e222ec332189c280:-266744122</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Sentinel Incidents">657f02ae2fb4a010aab2d5ccf699b65f</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>sebmolendijk@hotmail.com</sys_created_by>
+        <sys_created_on>2020-12-03 14:59:27</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>4dc336e8caf6464c95ff6decb42248f1</sys_id>
+        <sys_metadata>cded03b52ff82010aab2d5ccf699b67d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Sentinel Incidents</sys_name>
+        <sys_package display_value="AzSentinel integration" source="x_556309_azsentine">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AzSentinel integration">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_scope>
+        <sys_scope_delete display_value="">06e1044b773847259c12342f3a7313b1</sys_scope_delete>
+        <sys_update_name>sys_app_module_cded03b52ff82010aab2d5ccf699b67d</sys_update_name>
+        <sys_update_version display_value="sys_app_module_cded03b52ff82010aab2d5ccf699b67d">c1ed03b52ff82010aab2d5ccf699b681</sys_update_version>
+        <sys_updated_by>sebmolendijk@hotmail.com</sys_updated_by>
+        <sys_updated_on>2020-12-03 14:59:27</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

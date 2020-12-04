@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application">
+    <sys_app_application action="DELETE">
+        <active>true</active>
+        <category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category>
+        <description/>
+        <device_type>browser</device_type>
+        <hint/>
+        <name>User Entity</name>
+        <order>100</order>
+        <roles>x_556309_azsentine.user_entity_user</roles>
+        <sys_class_name>sys_app_application</sys_class_name>
+        <sys_created_by>sebmolendijk@hotmail.com</sys_created_by>
+        <sys_created_on>2020-11-26 16:45:27</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>469462dc2ff0e010aab2d5ccf699b663</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Azure Sentinel</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AzSentinel integration" source="x_556309_azsentine">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AzSentinel integration">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_scope>
+        <sys_update_name>sys_app_application_469462dc2ff0e010aab2d5ccf699b663</sys_update_name>
+        <sys_updated_by>sebmolendijk@hotmail.com</sys_updated_by>
+        <sys_updated_on>2020-12-03 15:28:02</sys_updated_on>
+        <title>Azure Sentinel</title>
+        <view_name/>
+    </sys_app_application>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AzSentinel integration">b7ac7bbb2fa0a010aab2d5ccf699b653</application>
+        <file_path/>
+        <instance_id>7c9ad04ddb34cf0852e3f70fbf96197c</instance_id>
+        <instance_name>dev43601</instance_name>
+        <name>sys_app_application_469462dc2ff0e010aab2d5ccf699b663</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application"><sys_app_application action="INSERT_OR_UPDATE"><active>true</active><category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category><description/><device_type>browser</device_type><hint/><name>User Entity</name><order>100</order><roles>x_556309_azsentine.user_entity_user</roles><sys_class_name>sys_app_application</sys_class_name><sys_created_by>sebmolendijk@hotmail.com</sys_created_by><sys_created_on>2020-11-26 16:45:27</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>469462dc2ff0e010aab2d5ccf699b663</sys_id><sys_mod_count>3</sys_mod_count><sys_name>Azure Sentinel</sys_name><sys_overrides/><sys_package display_value="AzSentinel integration" source="x_556309_azsentine">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_package><sys_policy/><sys_scope display_value="AzSentinel integration">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_scope><sys_update_name>sys_app_application_469462dc2ff0e010aab2d5ccf699b663</sys_update_name><sys_updated_by>sebmolendijk@hotmail.com</sys_updated_by><sys_updated_on>2020-12-03 15:28:02</sys_updated_on><title>Azure Sentinel</title><view_name/></sys_app_application></record_update>]]></payload>
+        <payload_hash>-1003858496</payload_hash>
+        <record_name>Azure Sentinel</record_name>
+        <reverted_from/>
+        <source>ceeef7ff2fa0a010aab2d5ccf699b6d4</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>sebmolendijk@hotmail.com</sys_created_by>
+        <sys_created_on>2020-12-03 15:28:02</sys_created_on>
+        <sys_id>4c0616a22ff4a010aab2d5ccf699b6d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1762937a8a00000001</sys_recorded_at>
+        <sys_updated_by>sebmolendijk@hotmail.com</sys_updated_by>
+        <sys_updated_on>2020-12-03 15:28:02</sys_updated_on>
+        <type>Application Menu</type>
+        <update_guid>840616a274f4a010a127e2c220ce9fd8</update_guid>
+        <update_guid_history>840616a274f4a010a127e2c220ce9fd8:-1003858496,6d6092ae9ab4a01088aee1cfdfe78795:-1993306446,c515e69c32f0e010a1430633ca724b15:-225395136,4e9462dc91f0e010241eb3f59b10e665:-733121568</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Azure Sentinel">86769aa22ff4a010aab2d5ccf699b681</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>sebmolendijk@hotmail.com</sys_created_by>
+        <sys_created_on>2020-12-03 15:30:05</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_application">sys_app_application</sys_db_object>
+        <sys_id>02a721bb2fba466988e8d53f0a62dd29</sys_id>
+        <sys_metadata>469462dc2ff0e010aab2d5ccf699b663</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Azure Sentinel</sys_name>
+        <sys_package display_value="AzSentinel integration" source="x_556309_azsentine">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AzSentinel integration">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_scope>
+        <sys_scope_delete display_value="">06e1044b773847259c12342f3a7313b1</sys_scope_delete>
+        <sys_update_name>sys_app_application_469462dc2ff0e010aab2d5ccf699b663</sys_update_name>
+        <sys_update_version display_value="sys_app_application_469462dc2ff0e010aab2d5ccf699b663">4c0616a22ff4a010aab2d5ccf699b6d8</sys_update_version>
+        <sys_updated_by>sebmolendijk@hotmail.com</sys_updated_by>
+        <sys_updated_on>2020-12-03 15:30:05</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
