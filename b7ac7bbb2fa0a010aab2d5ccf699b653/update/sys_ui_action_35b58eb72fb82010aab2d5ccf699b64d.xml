@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>Sync Sentinel comments</action_name>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition/>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages>Get all Sentinel comments since the last sync and add them as work notes.</messages>
+        <name>Sync Sentinel comments</name>
+        <onclick/>
+        <order>100</order>
+        <script><![CDATA[try { 
+		
+		gs.info('Looking for new Sentinel comments ...');
+		
+		var r = new sn_ws.RESTMessageV2('x_556309_azsentine.Get-IncidentComments', 'Get-Comments');
+		r.setStringParameterNoEscape('last_sync', current.last_sync);
+		r.setStringParameterNoEscape('incidentId', current.sentinel_id);
+		
+		gs.info('Contacting comments API ...');
+		var response = r.execute();
+		var responseBody = response.getBody();
+		var httpStatus = response.getStatusCode();
+		gs.info('Response status:' + httpStatus);
+		gs.info('Response body: ' + responseBody);
+		
+		var obj = JSON.parse(responseBody);
+		for(var i = 0; i < obj.length; i++) {
+
+			note = ('[code]' + '<b>Author</b>: ' + obj[i].author + '<br><b>Created time (UTC)</b>: ' + obj[i].createdTimeUTC + '<br><b>Comment</b>: ' + obj[i].message + '[/code]');
+			current.work_notes = note;
+			current.update();
+		}
+	}
+	catch(ex) {
+		var message = ex.message;
+	}]]></script>
+        <show_insert>false</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>sebmolendijk@hotmail.com</sys_created_by>
+        <sys_created_on>2020-12-07 11:32:01</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>35b58eb72fb82010aab2d5ccf699b64d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Sync Sentinel comments</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AzSentinel integration" source="x_556309_azsentine">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="AzSentinel integration">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_scope>
+        <sys_update_name>sys_ui_action_35b58eb72fb82010aab2d5ccf699b64d</sys_update_name>
+        <sys_updated_by>sebmolendijk@hotmail.com</sys_updated_by>
+        <sys_updated_on>2020-12-07 11:32:01</sys_updated_on>
+        <table>x_556309_azsentine_azsentinel_incidents</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

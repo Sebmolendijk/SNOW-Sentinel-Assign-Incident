@@ -5,24 +5,24 @@
         <action_delete>false</action_delete>
         <action_insert>true</action_insert>
         <action_query>false</action_query>
-        <action_update>false</action_update>
-        <active>true</active>
+        <action_update>true</action_update>
+        <active>false</active>
         <add_message>false</add_message>
         <advanced>true</advanced>
         <change_fields>false</change_fields>
         <client_callable>false</client_callable>
-        <collection>incident</collection>
+        <collection>x_556309_azsentine_azsentinel_incidents</collection>
         <condition/>
         <description/>
         <execute_function>false</execute_function>
-        <filter_condition table="incident">sys_created_onVALCHANGES^EQ<item endquery="false" field="sys_created_on" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
+        <filter_condition table="x_556309_azsentine_azsentinel_incidents">stateVALCHANGES^EQ<item endquery="false" field="state" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter_condition>
         <is_rest>false</is_rest>
         <message/>
-        <name>Get user enrichment</name>
+        <name>Add Sentinel comments to incident</name>
         <order>100</order>
-        <priority>100</priority>
+        <priority>50</priority>
         <rest_method/>
         <rest_method_text/>
         <rest_service/>
@@ -31,52 +31,51 @@
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 
-	// Add your code here
-	
-
 	try { 
-		var r = new sn_ws.RESTMessageV2();
-		var requestBody = { "userPrincipalName": 'seb@seccxp.ninja'};
-		r.setRequestBody(JSON.stringify(requestBody));
-		r.setEndpoint('https://prod-128.westeurope.logic.azure.com:443/workflows/2ae83fdc0ab44fb88168d7eaa90a358b/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Vll2qjuQdLx612ye7NLJH-wZX5_RFqU_raj0Kl9ioRI');
-	
 		
-		r.setHttpMethod('POST');
-		r.setRequestHeader("Accept","application/json");
-		r.setRequestHeader('Content-Type','application/json');
+		gs.info('Looking for new Sentinel comments ...');
+		
+		var r = new sn_ws.RESTMessageV2('x_556309_azsentine.Get-IncidentComments', 'Get-Comments');
+		r.setStringParameterNoEscape('last_sync', current.last_sync);
+		r.setStringParameterNoEscape('incidentId', current.sentinel_id);
+		
+		gs.info('Contacting comments API ...');
 		var response = r.execute();
 		var responseBody = response.getBody();
 		var httpStatus = response.getStatusCode();
-		var parsedData = JSON.parse(responseBody);
+		gs.info('Response status:' + httpStatus);
+		gs.info('Response body: ' + responseBody);
 		
-		current.work_notes = responseBody;//parsedData;
-		current.update();
-		
-   }
-   catch(ex) {
-		var message = ex.message;
-   }
+		var obj = JSON.parse(responseBody);
+		for(var i = 0; i < obj.length; i++) {
 
-	
+			note = ('[code]' + '<b>Author</b>: ' + obj[i].author + '<br><b>Created time (UTC)</b>: ' + obj[i].createdTimeUTC + '<br><b>Comment</b>: ' + obj[i].message + '[/code]');
+			current.work_notes = note;
+			current.update();
+		}
+	}
+	catch(ex) {
+		var message = ex.message;
+	}
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>sebmolendijk@hotmail.com</sys_created_by>
-        <sys_created_on>2020-11-30 18:54:57</sys_created_on>
+        <sys_created_on>2020-12-07 09:44:08</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>dca6eb252fb02010aab2d5ccf699b689</sys_id>
-        <sys_mod_count>7</sys_mod_count>
-        <sys_name>Get user enrichment</sys_name>
+        <sys_id>57db25772ff42010aab2d5ccf699b636</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>Add Sentinel comments to incident</sys_name>
         <sys_overrides/>
         <sys_package display_value="AzSentinel integration" source="x_556309_azsentine">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_package>
         <sys_policy/>
         <sys_scope display_value="AzSentinel integration">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_scope>
-        <sys_update_name>sys_script_dca6eb252fb02010aab2d5ccf699b689</sys_update_name>
+        <sys_update_name>sys_script_57db25772ff42010aab2d5ccf699b636</sys_update_name>
         <sys_updated_by>sebmolendijk@hotmail.com</sys_updated_by>
-        <sys_updated_on>2020-12-07 11:22:24</sys_updated_on>
+        <sys_updated_on>2020-12-07 11:12:27</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>
-    <sys_translated_text action="delete_multiple" query="documentkey=dca6eb252fb02010aab2d5ccf699b689"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=57db25772ff42010aab2d5ccf699b636"/>
 </record_update>

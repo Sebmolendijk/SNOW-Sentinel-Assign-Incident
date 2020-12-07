@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" extends="incident" label="AzSentinel Incidents" max_length="40" name="x_556309_azsentine_azsentinel_incidents" sizeclass="7" type="collection">
+    <element audit="true" extends="incident" label="AzSentinel Incidents" max_length="40" name="x_556309_azsentine_azsentinel_incidents" sizeclass="21" type="collection">
         <element attributes="edge_encryption_enabled=true" label="Last sync" max_length="40" name="last_sync" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Product" max_length="40" name="product" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Resource group" max_length="40" name="resource_group" read_only="true" type="string"/>
         <element display="true" label="Incident ID" max_length="50" name="sentinel_id" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Subscription ID" max_length="40" name="subscription_id" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Tactics" max_length="40" name="tactics" type="string"/>
+        <element attributes="no_sort=true,slushbucket_ref_no_expand=true" label="User" max_length="1024" name="u_user" reference="x_556309_azsentine_user_entity" type="glide_list"/>
         <element attributes="edge_encryption_enabled=true" label="Workspace ID" max_length="40" name="workspace_id" read_only="true" type="string"/>
     </element>
 </database>
