@@ -38,11 +38,12 @@
 		r.setStringParameterNoEscape('incidentOwner', current.assigned_to.email);
 		r.setStringParameterNoEscape('incidentStatus', current.state);
 		r.setStringParameterNoEscape('incidentSeverity', current.impact);
-		r.setStringParameterNoEscape('incidentComment', 'SNOW set status to: ' + current.state);
+		r.setStringParameterNoEscape('incidentComment', '(Work notes)\n State set to in SNOW: ' + current.state);
 
 		var response = r.execute();
 		var responseBody = response.getBody();
 		var httpStatus = response.getStatusCode();
+
 }
 catch (ex) {
 		var message = ex.message;
@@ -55,7 +56,7 @@ catch (ex) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>e68bb8482f74a010aab2d5ccf699b64a</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>Change incident status</sys_name>
         <sys_overrides/>
         <sys_package display_value="AzSentinel integration" source="x_556309_azsentine">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_package>
@@ -63,7 +64,7 @@ catch (ex) {
         <sys_scope display_value="AzSentinel integration">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_scope>
         <sys_update_name>sys_script_e68bb8482f74a010aab2d5ccf699b64a</sys_update_name>
         <sys_updated_by>sebmolendijk@hotmail.com</sys_updated_by>
-        <sys_updated_on>2020-11-26 12:02:57</sys_updated_on>
+        <sys_updated_on>2020-12-07 16:46:02</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>

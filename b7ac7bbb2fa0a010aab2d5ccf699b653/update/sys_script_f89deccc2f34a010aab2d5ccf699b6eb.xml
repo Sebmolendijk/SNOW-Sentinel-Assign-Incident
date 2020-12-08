@@ -38,14 +38,17 @@
 		r.setStringParameterNoEscape('incidentOwner', current.assigned_to.email);
 		r.setStringParameterNoEscape('incidentStatus', current.state);
 		r.setStringParameterNoEscape('incidentSeverity', current.impact);
-		r.setStringParameterNoEscape('incidentComment', 'SNOW set severity to: ' + current.impact);
+		r.setStringParameterNoEscape('incidentComment', '(Work notes)\nSeverity changed to in SNOW: ' + current.impact);
 
 		var response = r.execute();
 		var responseBody = response.getBody();
 		var httpStatus = response.getStatusCode();
+		
+		
    }
    catch(ex) {
 		var message = ex.message;
+		gs.error(message);
    }
 
 })(current, previous);]]></script>
@@ -55,7 +58,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f89deccc2f34a010aab2d5ccf699b6eb</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>23</sys_mod_count>
         <sys_name>Change incident severity</sys_name>
         <sys_overrides/>
         <sys_package display_value="AzSentinel integration" source="x_556309_azsentine">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_package>
@@ -63,7 +66,7 @@
         <sys_scope display_value="AzSentinel integration">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_scope>
         <sys_update_name>sys_script_f89deccc2f34a010aab2d5ccf699b6eb</sys_update_name>
         <sys_updated_by>sebmolendijk@hotmail.com</sys_updated_by>
-        <sys_updated_on>2020-11-26 11:13:15</sys_updated_on>
+        <sys_updated_on>2020-12-07 16:46:18</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>
