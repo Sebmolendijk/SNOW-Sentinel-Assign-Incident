@@ -40,10 +40,10 @@
 		//get current incident object
 		var grIncident = new GlideRecord('x_556309_azsentine_azsentinel_incidents');
 		grIncident.get(current.sys_id);
-		gs.info('Looking for new Sentinel comments ...');
+		gs.info('Looking for new Sentinel comments ...' + current.sys_id);
 		
 		//get Sentinel comments since last sync
-		gs.info('Contacting comments API ...');
+		gs.info('Contacting comments API ...' + current.sys_id);
 		var r = new sn_ws.RESTMessageV2('x_556309_azsentine.Get-IncidentComments', 'Get-Comments');
 		r.setStringParameterNoEscape('last_sync', current.last_sync);
 		r.setStringParameterNoEscape('incidentId', current.sentinel_id);
@@ -51,27 +51,27 @@
 		var response = r.execute();
 		var responseBody = response.getBody();
 		var httpStatus = response.getStatusCode();
-		gs.info('Response status:' + httpStatus);
-		gs.info('Response body: ' + responseBody);
+		gs.info(current.sys_id + ' - Response status:' + httpStatus);
+		gs.info(current.sys_id + ' - Response body: ' + responseBody);
 	
 	
 		var obj = JSON.parse(responseBody);
-		for(var i = 0; i < obj.length; i++) {
+		for(var i = 0; i < obj.comments.length; i++) {
 
-			note = ('[code]' + '<b>Source: Sentinel</b><br>' + '<b>Author</b>: ' + obj[i].author + '<br><b>Created time (UTC)</b>: ' + obj[i].createdTimeUTC + '<br><b>Comment</b>: ' + obj[i].message + '[/code]');
+			note = ('[code]' + '<b>Source: Sentinel</b><br><br>' + '<b>Author</b>: ' + obj.comments[i].author + '<br><b>Created time (UTC)</b>: ' + obj.comments[i].createdTimeUTC + '<br><b>Comment</b>:<br>' + obj.comments[i].message + '[/code]');
 			//current.work_notes = note;
 			//current.update;
 			
 			grIncident.work_notes = note;
 			grIncident.update();
 			
-			gs.info('Work note added: ' + note);		
+			gs.info(current.sys_id + ' - Work note added: ' + note);		
 		}
 	
 		//modify last_sync property
 			gs.info('Current last_sync is: ' + current.last_sync);
 			var now = new GlideDateTime();
-			gs.info('Setting last_sync to: ' + now);
+			gs.info(current.sys_id + ' - Setting last_sync to: ' + now);
 			grIncident.last_sync = now.toString();
 			grIncident.update();
 	
@@ -89,7 +89,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>57db25772ff42010aab2d5ccf699b636</sys_id>
-        <sys_mod_count>26</sys_mod_count>
+        <sys_mod_count>31</sys_mod_count>
         <sys_name>Add Sentinel comments to incident</sys_name>
         <sys_overrides/>
         <sys_package display_value="AzSentinel integration" source="x_556309_azsentine">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_package>
@@ -97,7 +97,7 @@
         <sys_scope display_value="AzSentinel integration">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_scope>
         <sys_update_name>sys_script_57db25772ff42010aab2d5ccf699b636</sys_update_name>
         <sys_updated_by>sebmolendijk@hotmail.com</sys_updated_by>
-        <sys_updated_on>2020-12-08 14:20:26</sys_updated_on>
+        <sys_updated_on>2020-12-10 15:58:10</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>

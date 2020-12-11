@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" extends="incident" label="AzSentinel Incidents" max_length="40" name="x_556309_azsentine_azsentinel_incidents" sizeclass="30" type="collection">
-        <element attributes="edge_encryption_enabled=true" display="true" label="Last sync (UTC)" max_length="40" name="last_sync" type="string"/>
+    <element audit="true" extends="incident" label="AzSentinel Incidents" max_length="40" name="x_556309_azsentine_azsentinel_incidents" sizeclass="83" type="collection">
+        <element attributes="edge_encryption_enabled=true" display="true" label="Last sync (UTC)" max_length="40" name="last_sync" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Product" max_length="40" name="product" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Resource group" max_length="40" name="resource_group" read_only="true" type="string"/>
         <element label="Incident ID" max_length="50" name="sentinel_id" read_only="true" type="string"/>

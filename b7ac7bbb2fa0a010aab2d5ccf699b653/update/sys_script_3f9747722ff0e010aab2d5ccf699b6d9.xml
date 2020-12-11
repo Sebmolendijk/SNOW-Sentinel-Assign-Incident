@@ -15,12 +15,13 @@
         <condition/>
         <description/>
         <execute_function>false</execute_function>
-        <filter_condition table="x_556309_azsentine_azsentinel_incidents">work_notesVALCHANGES^EQ<item endquery="false" field="work_notes" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
+        <filter_condition table="x_556309_azsentine_azsentinel_incidents">work_notesVALCHANGES^ORassigned_toVALCHANGES^EQ<item endquery="false" field="work_notes" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
+            <item endquery="false" field="assigned_to" goto="false" newquery="false" operator="VALCHANGES" or="true" value=""/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter_condition>
         <is_rest>false</is_rest>
         <message/>
-        <name>Add last comment to Sentinel</name>
+        <name>Sync incident from Sentinel</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -43,6 +44,85 @@
 				var responseBody = response.getBody();
 				var httpStatus = response.getStatusCode();
 
+			
+			//get current incident object
+			var grIncident = new GlideRecord('x_556309_azsentine_azsentinel_incidents');
+			grIncident.get(current.sys_id);
+			gs.info(current.sys_id +  + 'Looking for new Sentinel comments ...');
+
+			//get Sentinel comments since last sync
+			gs.info(current.sys_id +  + 'Contacting comments API ...');
+			var resp = new sn_ws.RESTMessageV2('x_556309_azsentine.Get-IncidentComments', 'Get-Comments');
+			resp.setStringParameterNoEscape('last_sync', current.last_sync);
+			resp.setStringParameterNoEscape('incidentId', current.sentinel_id);
+
+			response = resp.execute();
+			responseBody = response.getBody();
+			httpStatus = response.getStatusCode();
+			gs.info('Response status:' + httpStatus);
+			gs.info('Response body: ' + responseBody);
+
+
+			var obj = JSON.parse(responseBody);
+			for(var i = 0; i < obj.comments.length; i++) {
+
+				note = ('[code]' + '<b>Source: Sentinel</b><br><br>' + '<b>Author</b>: ' + obj.comments[i].author + '<br><b>Created time (UTC)</b>: ' + obj.comments[i].createdTimeUTC + '<br><b>Comment</b>:<br>' + obj.comments[i].message + '[/code]');
+				//current.work_notes = note;
+				//current.update;
+
+				grIncident.work_notes = note;
+				grIncident.update();
+
+				gs.info(current.sys_id + 'Work note added: ' + note);		
+			}
+			//modify status, severity and owner if different
+			if((obj.details.owner != current.assigned_to.email) && (obj.details.owner != null)) {
+				gs.info(current.sys_id + ' owner set to ' + obj.details.owner + ' from Sentinel Old value: ' + current.assigned_to.email);
+				grIncident.assigned_to.email = obj.details.owner;
+			}
+
+			//map status values between Sentinel ans SNOW
+			var status = 0;
+			switch(obj.details.status) {
+				case "New":
+					status = 1;
+					break;
+				case "Active":
+					status = 2;
+					break;
+				case "Closed":
+					status = 6;
+			}
+			if(status != 0) {
+				gs.info(current.sys_id + ' state set to ' + obj.details.status + ' from Sentinel. Old value: ' + current.state);
+				grIncident.state = status;
+			}
+
+			//map status values between Sentinel ans SNOW
+			var severity = 0;
+			switch(obj.details.severity) {
+				case "Low":
+					severity = 3;
+					break;
+				case "Medium":
+					severity = 2;
+					break;
+				case "High":
+					severity = 1;
+			}
+			if(severity != current.impact) {
+				gs.info(current.sys_id + ' severity set to ' + obj.details.severity + ' from Sentinel. Old value: '+ current.impact);
+				grIncident.impact = severity;
+			}
+
+			//modify last_sync property
+			gs.info(current.sys_id + 'Current last_sync is: ' + current.last_sync);
+			var now = new GlideDateTime();
+			gs.info(current.sys_id + 'Setting last_sync to: ' + now);
+			grIncident.last_sync = now.toString();
+			grIncident.update();
+	
+			
 			}
 		catch(ex) {
 			var message = ex.message;
@@ -56,15 +136,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>3f9747722ff0e010aab2d5ccf699b6d9</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_name>Add last comment to Sentinel</sys_name>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Sync incident from Sentinel</sys_name>
         <sys_overrides/>
         <sys_package display_value="AzSentinel integration" source="x_556309_azsentine">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_package>
         <sys_policy/>
         <sys_scope display_value="AzSentinel integration">b7ac7bbb2fa0a010aab2d5ccf699b653</sys_scope>
         <sys_update_name>sys_script_3f9747722ff0e010aab2d5ccf699b6d9</sys_update_name>
         <sys_updated_by>sebmolendijk@hotmail.com</sys_updated_by>
-        <sys_updated_on>2020-12-08 14:21:37</sys_updated_on>
+        <sys_updated_on>2020-12-11 14:50:38</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>
